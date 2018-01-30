@@ -32,7 +32,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         # Connections
         self.confirmBtnAddExpense.clicked.connect(self.add_expense)
         self.confirmBtnAddIncome.clicked.connect(self.add_income)
-
+        self.confirmBtnAddGasoline.clicked.connect(self.add_gasoline)
+        self.confirmBtnAddTransfer.clicked.connect(self.add_transfer)
         
 
     def change_qss(self, theme):
@@ -97,6 +98,51 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         message_body = "Your transaction was added"
         QMessageBox.information(self, message_title, message_body, QMessageBox.Ok)
 
+    def add_gasoline(self):
+        year = self.calendarAddGasoline.selectedDate().year()
+        month = self.calendarAddGasoline.selectedDate().month()
+        day = self.calendarAddGasoline.selectedDate().day()
+        date = datetime.date(year, month, day)
+        value = float(get_text(self.valueAddGasoline))
+        category = 'Car Expenses'
+        description = 'Gasoline'
+        account = get_text(self.accountAddGasoline)
+        observations = get_text(self.observationsAddGasoline)
+        kilometeres = float(get_text(self.kilometersAddGasoline))
+        liters = float(get_text(self.litersAddGasoline))
+        transaction = Expense(date, value, category, description, account, observations)
+
+        wb = Workbook()
+        wb.add_transaction(transaction)
+        wb.add_gasoline(date, kilometeres, liters)
+
+        wb.save_and_quit()
+        message_title = "Transaction added"
+        message_body = "Your transaction was added"
+        QMessageBox.information(self, message_title, message_body, QMessageBox.Ok)
+
+    def add_transfer(self):
+        year = self.calendarAddTransfer.selectedDate().year()
+        month = self.calendarAddTransfer.selectedDate().month()
+        day = self.calendarAddTransfer.selectedDate().day()
+        date = datetime.date(year, month, day)
+        value = float(get_text(self.valueAddTransfer))
+        category = 'Transfer'
+        accountFrom = get_text(self.accountFromAddTransfer)
+        accountTo = get_text(self.accountToAddTransfer)
+        descriptionFrom = f'To {accountTo}'
+        descriptionTo = f'From {accountFrom}'
+        observations = get_text(self.observationsAddTransfer)
+        withdraw = Expense(date, value, category, descriptionFrom, accountFrom, observations)
+        deposit = Income(date, value, category, descriptionTo, accountTo, observations)
+        
+        wb = Workbook()
+        wb.add_transaction(withdraw)
+        wb.add_transaction(deposit)
+        wb.save_and_quit()
+        message_title = "Transaction added"
+        message_body = "Your transaction was added"
+        QMessageBox.information(self, message_title, message_body, QMessageBox.Ok)
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)

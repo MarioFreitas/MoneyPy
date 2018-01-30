@@ -9,6 +9,7 @@ class Workbook:
         self.Incomes = self.wb.get_sheet_by_name('Incomes')
         self.Expenses = self.wb.get_sheet_by_name('Expenses')
         self.History = self.wb.get_sheet_by_name('Time History')
+        self.Gasoline = self.wb.get_sheet_by_name('Gasoline')
 
     def add_transaction(self, transaction):
         if isinstance(transaction, Expense):
@@ -61,7 +62,23 @@ class Workbook:
         self.History[f'C{n}'] = value
         self.History[f'C{n}'].style = 'Currency'
 
-    
+    def add_gasoline(self, date, kilometers, liters):
+        ws = self.Gasoline
+    	# Row to be filled
+        n = len(ws['B']) + 1
+
+        autonomy = kilometers/liters
+
+        # Date
+        ws[f'A{n}'].value = date
+        # Kilometers
+        ws[f'B{n}'].value = kilometers
+        # Liters
+        ws[f'C{n}'].value = liters
+        # Autonomy
+        ws[f'D{n}'].value = autonomy
+
+
     def save_and_quit(self):
         self.wb.save(self.filename)
         self.wb.close()

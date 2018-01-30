@@ -18,10 +18,10 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_2">
-    <item row="0" column="1">
+    <item row="0" column="0">
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -71,11 +71,6 @@
           </item>
           <item>
            <property name="text">
-            <string>Dad's Expenses</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
             <string>Eletronics</string>
            </property>
           </item>
@@ -96,12 +91,22 @@
           </item>
           <item>
            <property name="text">
+            <string>Leisure</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
             <string>Restaurants</string>
            </property>
           </item>
           <item>
            <property name="text">
             <string>Supermarket</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Others</string>
            </property>
           </item>
          </widget>
@@ -132,11 +137,6 @@
           </item>
           <item>
            <property name="text">
-            <string>Dad's Account</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
             <string>Savings Account</string>
            </property>
           </item>
@@ -149,15 +149,15 @@
           </property>
          </widget>
         </item>
-        <item row="3" column="1" colspan="3">
-         <widget class="QTextEdit" name="observationsAddExpense"/>
-        </item>
         <item row="4" column="3">
          <widget class="QPushButton" name="confirmBtnAddExpense">
           <property name="text">
            <string>Confirm</string>
           </property>
          </widget>
+        </item>
+        <item row="3" column="1" colspan="3">
+         <widget class="QLineEdit" name="observationsAddExpense"/>
         </item>
        </layout>
       </widget>
@@ -207,6 +207,11 @@
             <string>Salary</string>
            </property>
           </item>
+          <item>
+           <property name="text">
+            <string>Others</string>
+           </property>
+          </item>
          </widget>
         </item>
         <item row="2" column="2">
@@ -222,9 +227,6 @@
            <string>Observations</string>
           </property>
          </widget>
-        </item>
-        <item row="3" column="1" colspan="3">
-         <widget class="QTextEdit" name="observationsAddIncome"/>
         </item>
         <item row="4" column="3">
          <widget class="QPushButton" name="confirmBtnAddIncome">
@@ -252,7 +254,60 @@
           </item>
           <item>
            <property name="text">
-            <string>Dad's Savings</string>
+            <string>Savings Account</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="3" column="1" colspan="3">
+         <widget class="QLineEdit" name="observationsAddIncome"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>Add Gasoline</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0" colspan="5">
+         <widget class="QCalendarWidget" name="calendarAddGasoline">
+          <property name="gridVisible">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_11">
+          <property name="text">
+           <string>Value</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="valueAddGasoline"/>
+        </item>
+        <item row="1" column="2">
+         <widget class="QLabel" name="label_13">
+          <property name="text">
+           <string>Account</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3" colspan="2">
+         <widget class="QComboBox" name="accountAddGasoline">
+          <item>
+           <property name="text">
+            <string>Cash</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Checking Account</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Credit Card</string>
            </property>
           </item>
           <item>
@@ -260,6 +315,146 @@
             <string>Savings Account</string>
            </property>
           </item>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_12">
+          <property name="text">
+           <string>Kilometers</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="kilometersAddGasoline"/>
+        </item>
+        <item row="2" column="2" colspan="2">
+         <widget class="QLabel" name="label_15">
+          <property name="text">
+           <string>Liters</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="4">
+         <widget class="QLineEdit" name="litersAddGasoline"/>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_14">
+          <property name="text">
+           <string>Observations</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1" colspan="4">
+         <widget class="QLineEdit" name="observationsAddGasoline"/>
+        </item>
+        <item row="4" column="3" colspan="2">
+         <widget class="QPushButton" name="confirmBtnAddGasoline">
+          <property name="text">
+           <string>Confirm</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="title">
+        <string>Add Transfer</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="0" column="0" colspan="4">
+         <widget class="QCalendarWidget" name="calendarAddTransfer">
+          <property name="gridVisible">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_16">
+          <property name="text">
+           <string>Value</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="valueAddTransfer"/>
+        </item>
+        <item row="1" column="2">
+         <widget class="QLabel" name="label_17">
+          <property name="text">
+           <string>From</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QComboBox" name="accountFromAddTransfer">
+          <item>
+           <property name="text">
+            <string>Cash</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Checking Account</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Credit Card</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Savings Account</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_19">
+          <property name="text">
+           <string>Observations</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="observationsAddTransfer"/>
+        </item>
+        <item row="2" column="2">
+         <widget class="QLabel" name="label_18">
+          <property name="text">
+           <string>To</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="3">
+         <widget class="QComboBox" name="accountToAddTransfer">
+          <item>
+           <property name="text">
+            <string>Cash</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Checking Account</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Credit Card</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Savings Account</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="3" column="3">
+         <widget class="QPushButton" name="confirmBtnAddTransfer">
+          <property name="text">
+           <string>Confirm</string>
+          </property>
          </widget>
         </item>
        </layout>

@@ -1,0 +1,8 @@
+2018-01-24 11:26:13,164:INFO:Transaction Added: (datetime.date(2018, 1, 23), 24.0, 'Hot dog', 'Supermarket', 'Cash', '')
+2018-01-24 11:26:13,650:INFO:Transaction Added: (datetime.date(2018, 1, 23), 2.0, 'Donation', 'Supermarket', 'Cash', '')
+2018-01-24 17:30:54,397:ERROR:[Errno 13] Permission denied: './Data/Finances.xlsx'
+2018-01-24 17:36:05,040:INFO:Transaction Added: (datetime.date(2018, 1, 24), 40.29, 'Mercado', 'Supermarket', 'Credit Card', '')
+2018-01-29 22:00:24,209:INFO:Transaction Added: (datetime.date(2018, 1, 29), 2.0, 'PC3A3o de Queijo', 'Restaurants', 'Cash', '')
+2018-01-29 22:00:24,681:INFO:Transaction Added: (datetime.date(2018, 1, 29), 160.0, 'Gasoline', 'Car Expenses', 'Cash', '')
+2018-01-29 22:00:25,103:ERROR:time data '2018-29-01' does not match format '%Y-%m-%d'
+2018-01-30 15:34:47,945:INFO:Transaction Added: (datetime.date(2018, 1, 30), 2.0, 'Pao de Queijo', 'Restaurants', 'Cash', '')
