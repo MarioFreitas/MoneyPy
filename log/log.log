@@ -6,3 +6,16 @@
 2018-01-29 22:00:24,681:INFO:Transaction Added: (datetime.date(2018, 1, 29), 160.0, 'Gasoline', 'Car Expenses', 'Cash', '')
 2018-01-29 22:00:25,103:ERROR:time data '2018-29-01' does not match format '%Y-%m-%d'
 2018-01-30 15:34:47,945:INFO:Transaction Added: (datetime.date(2018, 1, 30), 2.0, 'Pao de Queijo', 'Restaurants', 'Cash', '')
+2018-01-30 21:14:05,677:INFO:Transaction Added: (datetime.date(2018, 1, 22), 10.0, 'Water', 'Eletronics', 'Credit Card', 'moneypy')
+2018-01-30 21:16:46,704:ERROR:[Errno 13] Permission denied: './Data/Finances.xlsx'
+2018-01-30 21:17:46,745:INFO:Income Added: (datetime.date(2018, 2, 5), 1500.0, 'Salary', 'Salary', 'Checking Account', 'moneypy')
+2018-01-30 21:52:24,748:ERROR:list index out of range
+2018-01-30 21:54:01,577:INFO:Gasoline Added: (datetime.date(2018, 2, 3), 150.0, 'Gasoline', 'Car Expenses', 540.0, 38.0, 'Cash', 'moneypy')
+2018-01-30 21:57:04,195:INFO:Gasoline Added: (datetime.date(2018, 2, 3), 150.0, 'Gasoline', 'Car Expenses', 540.0, 38.0, 'Cash', 'moneypy')
+2018-01-30 22:05:06,266:ERROR:local variable 'kilometeres' referenced before assignment
+2018-01-30 22:05:47,381:ERROR:name 'description' is not defined
+2018-01-30 22:06:46,504:INFO:Transfer Added: (datetime.date(2018, 2, 1), 100.0, 'Transfer', 'Checking Account', 'Savings Account', 'To Savings Account', 'From Checking Account', 'moneypy')
+2018-01-30 22:13:45,650:INFO:Expense Added: (datetime.date(2018, 1, 22), 10.0, 'Water', 'Restaurants', 'Cash', 'moneypy')
+2018-01-30 22:13:46,104:INFO:Income Added: (datetime.date(2018, 2, 5), 100.0, 'Salary', 'Salary', 'Checking Account', 'moneypy')
+2018-01-30 22:13:46,583:INFO:Gasoline Added: (datetime.date(2018, 2, 3), 50.0, 'Gasoline', 'Car Expenses', 200.0, 12.0, 'Cash', 'moneypy')
+2018-01-30 22:17:38,579:INFO:Transfer Added: (datetime.date(2018, 2, 1), 100.0, 'Transfer', 'Checking Account', 'Cash', 'moneypy')
